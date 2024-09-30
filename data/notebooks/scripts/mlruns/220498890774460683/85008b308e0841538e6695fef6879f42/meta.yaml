@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ab77744/mlflow_assignment/data/notebooks/scripts/mlruns/220498890774460683/85008b308e0841538e6695fef6879f42/artifacts
+end_time: 1727674221041
+entry_point_name: ''
+experiment_id: '220498890774460683'
+lifecycle_stage: active
+run_id: 85008b308e0841538e6695fef6879f42
+run_name: redolent-goose-490
+run_uuid: 85008b308e0841538e6695fef6879f42
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727674217748
+status: 3
+tags: []
+user_id: ab77744

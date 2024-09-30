@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ab77744/mlflow_assignment/data/notebooks/scripts/mlruns/220498890774460683/98bf4c6d685448ebae5d167f167d472f/artifacts
+end_time: 1727674217524
+entry_point_name: ''
+experiment_id: '220498890774460683'
+lifecycle_stage: active
+run_id: 98bf4c6d685448ebae5d167f167d472f
+run_name: invincible-wolf-478
+run_uuid: 98bf4c6d685448ebae5d167f167d472f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727674211884
+status: 3
+tags: []
+user_id: ab77744
