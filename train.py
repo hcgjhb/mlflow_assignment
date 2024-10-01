@@ -23,16 +23,12 @@ df.describe()
 df.shape
 
 sns.boxplot(df['horsepower'])
-plt.show()
 
 sns.boxplot(df['weight'])
-plt.show()
 
 sns.boxplot(df['acceleration'])
-plt.show()
 
 sns.boxplot(df['displacement'])
-plt.show()
 
 def remove_outlier(df, col):
   lower_limit = df[col].quantile(0.05)
@@ -45,34 +41,26 @@ df = remove_outlier(df, 'weight')
 df.shape
 
 sns.boxplot(df['horsepower'])
-plt.show()
 
 sns.boxplot(df['acceleration'])
-plt.show()
 
 sns.histplot(df['acceleration'], kde=True)
-plt.show()
-
 sns.histplot(df['displacement'], kde=True)
-plt.show()
 
 sns.histplot(df['horsepower'], kde=True)
-plt.show()
+
 
 sns.histplot(df['weight'], kde=True)
-plt.show()
 
 df['log_displacement'] = np.log(df['displacement'] + 1)  # +1 to avoid log(0)
 sns.histplot(df['log_displacement'], kde=True)
-plt.show()
 
 df['log_horsepower'] = np.log(df['horsepower'] + 1)
 sns.histplot(df['log_horsepower'], kde=True)
-plt.show()
+
 
 df['log_weight'] = np.log(df['weight'] + 1)
 sns.histplot(df['log_weight'], kde=True)
-plt.show()
 
 from scipy.stats import zscore
 df['acceleration'] = zscore(df['acceleration'])
@@ -88,20 +76,13 @@ numerical_features = ['cylinders', 'acceleration', 'log_displacement', 'log_hors
 X = df[numerical_features]
 y = df['mpg']
 
-import mlflow
-from mlflow import MlflowClient
-
-
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score, accuracy_score, precision_score
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-mlflow.set_experiment("MLflow_exp")
-
-mlflow.set_tracking_uri("http://localhost:5000")
-
+import mlflow
 # Function to log model and metrics with MLflow
 def log_model_with_mlflow(model, model_name):
     with mlflow.start_run():
